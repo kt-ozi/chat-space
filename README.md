@@ -10,6 +10,7 @@
 ### Association
 - has_many :users, through: :groups_users
 - has_many :users
+- has_many :messages
 
 
 ## usersテーブル
@@ -43,12 +44,14 @@
 
 |Column|Type|Options|
 |------|----|-------|
+|gruop_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |text|text|null: false|
 |image|text||
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 
 This README would normally document whatever steps are necessary to get the
