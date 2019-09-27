@@ -17,8 +17,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|username|string|null: false|
-|email|string|null: false|
+|username|string|null: false, add_index|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
@@ -45,7 +45,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |text|text|null: false|
-|image|texe||
+|image|text||
 
 ### Association
 - belongs_to :user
