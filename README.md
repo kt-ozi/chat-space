@@ -44,7 +44,7 @@
 |------|----|-------|
 |gruop_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|text|text|null: false|
+|text|text||
 |image|text||
 
 ### Association
