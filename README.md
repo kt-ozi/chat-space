@@ -4,7 +4,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
 |groupname|string|null: false|
 
 ### Association
@@ -29,7 +28,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |username|string|null: false, add_index|
 |email|string|null: false, unique: true|
 |password|string|null: false|
