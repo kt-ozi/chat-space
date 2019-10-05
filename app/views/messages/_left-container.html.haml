@@ -1,0 +1,22 @@
+.left-container
+  .left-header
+    %h.left-header__user-name
+      username
+    %ul.left-header__menu
+      %li.left-header__new-group
+        =link_to "/messages", class: "left-header__btn" do
+          = fa_icon 'edit'
+      %li.left-header__edit-group
+        =link_to "/messages", class: "left-header__btn" do
+          = fa_icon 'cog'
+  .left-content
+    .group
+      %p.group__name
+        A-group
+      %p.group__message
+        ABC
+    .group
+      %p.group__name
+        B-group
+      %p.group__message
+        ABCD
