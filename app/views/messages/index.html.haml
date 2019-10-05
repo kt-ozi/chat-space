@@ -1,0 +1,46 @@
+.flash-box
+  .notice
+    グループを作成しました
+
+.wrapper
+  = render "messages/left-container"
+  .right-container
+    .right-header
+      .right-header__box
+        %h.right-header__group-name
+          A-group
+        %ul.right-header__member-list
+          Member:
+          %li.right-header__member1
+            A
+          %li.right-header__member2
+            B
+      %a.right-header__menu
+        =link_to "/messages", class: "right-header__btn" do
+          Edit
+
+    .right-content
+      .right-content__message-data
+        %p.right-content__send-username
+          A
+        %p.right-content__send-date
+          2019/10/10(Wed)10:00
+      %p.right-content__user-message
+        ABC
+      .right-content__message-data
+        %p.right-content__send-username
+          B
+        %p.right-content__send-date
+          2019/10/10(Wed)11:00
+      %p.right-content__user-message
+        ABCD
+
+    .right-footer
+      .right-form
+        .right-form__message-box
+          %input{:name => "title",:placeholder => "type a message", class: "right-form__message-box__message"}
+          %a.right-form__image
+          %label
+            %input{:type => "file", class: "right-form__message-box__image"}
+            = fa_icon 'image'
+        %input{:type => "submit", :value => "Send", class: "right-form__btn"}
