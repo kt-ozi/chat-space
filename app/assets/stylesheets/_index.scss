@@ -1,0 +1,167 @@
+@mixin font-option($font-size: 16px, $color: #ffffff, $font-weight: bold) {
+  font-size: $font-size;
+  color: $color;
+  font-weight: $font-weight;
+}
+
+$chat-sapce-color1: #38aef0;
+$chat-sapce-color2: #ffffff;
+$chat-sapce-color3: #434A54;
+
+
+* {
+  box-sizing: border-box;
+}
+
+.flash-box {
+  @include font-option(1rem, $chat-sapce-color2, lighter);
+  text-align: center;
+  width: 100vw;
+  .notice {
+    background-color: $chat-sapce-color1;
+  }
+}
+
+.left-container {
+  width: 300px;
+  float:left;
+  color: $chat-sapce-color2;
+  .left-header {
+    @include font-option;
+    display: flex;
+    height: 100px;
+    background-color: #253141;
+    justify-content: space-between;
+    &__user-name {
+      text-align: left;
+      line-height: 100px;
+      padding:0 20px 0;
+    }
+    &__menu {
+      display: flex;
+      line-height: 100px;
+      padding:0 20px 0;
+    }
+    &__new-group {
+      margin-left: 0.3rem;
+    }
+    &__edit-group {
+      margin-left: 0.3rem;
+      }
+    &__btn {
+      color: $chat-sapce-color2;
+    }
+  }
+  .left-content {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+    .group {
+      padding-bottom: 40px;
+      &__name {
+        @include font-option(15px, $chat-sapce-color2, normal);
+        margin-bottom: 5px;
+      }
+      &__message{
+        @include font-option(11px, $chat-sapce-color2, normal);
+      }
+    }
+  }
+}
+
+.right-container {
+  width: calc(100vw - 300px);
+  float: left;
+  .right-header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
+    &__box {
+      margin-top: 35px;
+    }
+    &__group-name {
+      margin-bottom: 15px;
+      @include font-option(20px, #333333, normal);
+      display: block;
+    }
+    &__member-list {
+      text-align: left;
+      @include font-option(12px, #999999, normal);
+      display: flex;
+    }
+    &__btn {
+      border: 1px solid $chat-sapce-color1;
+      color: $chat-sapce-color1;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px 0;
+      margin-top: 30px;
+      position: absolute;
+      right: 40px;
+      text-decoration: none;
+    }
+  }
+  .right-content {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    &__message-data {
+      padding-bottom: 10px;
+      display: flex;
+    }
+    &__send-username {
+      @include font-option(16px, $chat-sapce-color3, bold);
+    }
+    &__send-date {
+      @include font-option(12px, #999999, normal);
+      margin-left: 10px;
+    }
+    &__user-message {
+      @include font-option(14px, $chat-sapce-color3, normal);
+      padding-bottom: 40px;
+    }
+  }
+  .right-footer {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    .right-form {
+      display: flex;
+      &__message-box {
+        display: flex;
+        position: relative;
+        width: 100%;
+        &__message {
+          @include font-option(16px,  $chat-sapce-color3, normal);
+          height: 50px;
+          width: 100%;
+          padding: 0 10px 0;
+          border: none;
+        }
+        label {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
+        &__image {
+          display: none;
+        }
+      }
+      &__btn {
+        background-color: $chat-sapce-color1;
+        color: $chat-sapce-color2;
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+    }
+  }
+}
