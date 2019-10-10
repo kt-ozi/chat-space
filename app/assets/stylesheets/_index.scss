@@ -13,15 +13,6 @@ $chat-sapce-color3: #434A54;
   box-sizing: border-box;
 }
 
-.flash-box {
-  @include font-option(1rem, $chat-sapce-color2, lighter);
-  text-align: center;
-  width: 100vw;
-  .notice {
-    background-color: $chat-sapce-color1;
-  }
-}
-
 .left-container {
   width: 300px;
   float:left;
