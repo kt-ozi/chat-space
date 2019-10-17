@@ -10,13 +10,10 @@
         =link_to edit_user_path(current_user), class: "left-header__btn" do
           = fa_icon 'cog'
   .left-content
-    .group
-      %p.group__name
-        A-group
-      %p.group__message
-        ABC
-    .group
-      %p.group__name
-        B-group
-      %p.group__message
-        ABCD
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
