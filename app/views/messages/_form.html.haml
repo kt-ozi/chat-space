@@ -1,0 +1,9 @@
+.right-form
+  = form_for [@group, @message] do |f|
+    .right-form__message-box
+      = f.text_field :content, class: 'right-form__message-box__message', placeholder: 'type a message'
+      .right-form__image
+        = f.label :image, class: 'right-form__message-box__label' do
+          = fa_icon 'picture-o', class: 'right-form__message-box__label'
+          = f.file_field :image, class: 'right-form__message-box__image'
+    = f.submit 'Send', class: 'right-form__btn'

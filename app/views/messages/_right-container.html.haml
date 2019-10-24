@@ -1,0 +1,13 @@
+.right-header
+  .right-header__box
+    %h.right-header__group-name
+      = @group.name
+    %ul.right-header__member-list
+      Member:
+      %li.right-header__member1
+        = @group.user
+      %li.right-header__member2
+        B
+  %a.right-header__menu
+    =link_to edit_group_path(current_user), class: "right-header__btn" do
+      Edit
