@@ -5,9 +5,9 @@
     %ul.right-header__member-list
       Member:
       %li.right-header__member1
-        = @group.user
-      %li.right-header__member2
-        B
+        - while @membernum != 0 do
+          = @group.users[@membernum-1][:name]
+          - @membernum -= 1
   %a.right-header__menu
     =link_to edit_group_path(current_user), class: "right-header__btn" do
       Edit
