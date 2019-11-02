@@ -9,5 +9,5 @@
           = @group.users[@membernum-1][:name]
           - @membernum -= 1
   %a.right-header__menu
-    =link_to edit_group_path(current_user), class: "right-header__btn" do
+    =link_to edit_group_path(@group.id), class: "right-header__btn" do
       Edit
