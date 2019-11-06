@@ -37,7 +37,6 @@ $(function(){
       $('#new_message')[0].reset();
       $('.right-form__btn').removeAttr("disabled", 'disabled');
       $('.right-content').animate({ scrollTop: $('.right-content')[0].scrollHeight}, 'swing');
-      console.log("メッセージ追加");
     })
     .fail(function(){
       alert('Error');
@@ -66,14 +65,11 @@ $(function(){
             $('#new-message').removeAttr('id')
           }
         });
-        
-        
       })
       .fail(function() {
         console.log('自動更新に失敗しました');
       });
     }
-    console.log("更新しました");
   };
   setInterval(reloadMessages, 5000);
 });
