@@ -60,7 +60,6 @@ $(function() {
 
   $(document).on("click", ".user-search-add", function(){
     $('.chat-group-user')
-    console.log("イベント発火");
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
