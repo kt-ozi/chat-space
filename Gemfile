@@ -74,6 +74,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 
-group :production do
-  gem 'unicorn', '5.4.1'
-end
+gem 'unicorn', '5.4.1'
